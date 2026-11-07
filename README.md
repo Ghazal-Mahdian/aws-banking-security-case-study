@@ -108,15 +108,6 @@ Full table: [docs/validation.md](docs/validation.md).
 - The AWS resources have since been shut down for budget reasons, so the deployment can no longer be inspected live. The author reports that everything ran normally at completion. The screenshots are the only record.
 - Account ID, API ID, user pool ID, and account-derived bucket and log group names are redacted in the screenshots.
 
-## Lessons learned
-
-No written reflection was supplied for this project.
-
-**Suggested reflections — for your review before publishing:**
-- A reference architecture lists many controls. Deploying the request path first, then adding identity (a Cognito authorizer) and keys (KMS), shows the order security controls are usually layered in.
-- A public `prod` stage with no authorizer and no WAF is reachable by anyone who has the URL. In a real system, authentication would be the first control added after the API works.
-- The HTTP response contains Lambda's own `statusCode`/`headers`/`body` object. That pattern usually means the method uses a non-proxy integration while the function returns a proxy-style response. Choosing one model keeps clients from double-parsing.
-- CloudTrail with log file validation and CloudWatch Logs delivery gives an auditable record. Connecting it to alarms (for example, on IAM or KMS changes) would turn logging into monitoring.
 
 ## Reviewing this repository
 
