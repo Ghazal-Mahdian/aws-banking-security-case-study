@@ -1,0 +1,32 @@
+# OS and editor files
+.DS_Store
+._*
+__MACOSX/
+Thumbs.db
+*.swp
+.vscode/
+.idea/
+
+# AWS credentials and local environment
+.aws/
+*.pem
+*.key
+.env
+*.env
+credentials
+*accessKeys*.csv
+
+# Infrastructure tool state (if added later)
+.terraform/
+*.tfstate
+*.tfstate.*
+.aws-sam/
+cdk.out/
+
+# Local working material that should not be published
+originals/
+private/
+unredacted/
+*.mp4
+*.mov
+*.zip
