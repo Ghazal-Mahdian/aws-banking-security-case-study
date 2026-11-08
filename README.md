@@ -2,7 +2,7 @@
 
 I designed a secure, scalable architecture for a retail bank moving customer and transaction data to AWS, then deployed and tested its core in my own AWS account. The deployment includes a serverless transaction API (API Gateway → Lambda → DynamoDB) with fraud-check logic, a relational database tier, a user identity pool, and account-wide audit logging with tamper-evident log validation.
 
-**Region:** us-east-2 (Ohio)
+
 **Services:** API Gateway · Lambda · DynamoDB · RDS (MySQL) · Cognito · IAM · CloudTrail · CloudWatch · S3
 
 ![Architecture diagram](assets/screenshots/architecture-diagram-banking-aws.png)
